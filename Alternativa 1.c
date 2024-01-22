@@ -12,9 +12,31 @@ int main() {
         printf("Ingrese su año de nacimiento (1000-2024): ");
         scanf("%d", &anio);
 
+     if (mes == 2) {
+        if ((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)) {
+            
+            if (dia > 29) {
+              // Año bisiesto
+            printf("Fecha ingresada no válida. Por favor, ingrese una fecha válida.\n");
+            printf("¿Desea calcular otro número de la suerte? (s/n): ");
+            scanf(" %c", &respuesta);
+            }
+        
+        } else {
+            if (dia > 28) {
+            printf("Fecha ingresada no válida. Por favor, ingrese una fecha válida.\n");
+            printf("¿Desea calcular otro número de la suerte? (s/n): ");
+            scanf(" %c", &respuesta);
+               // Año no bisiesto
+
+            }
+        }
+     } 
+     
         if ((dia >= 1 && dia <= 31) && (mes >= 1 && mes <= 12) && (anio >= 1000 && anio <= 2024)) {
             suma_digitos = 0;
-
+ 
+    
             while (anio > 0) {
                 digito = anio % 10;
                 suma_digitos += digito;
@@ -39,8 +61,13 @@ int main() {
             }
 
             printf("Su número de la suerte es: %d\n", suma_digitos);
-        } else {
+        }
+
+       else 
+        {
             printf("Fecha ingresada no válida. Por favor, ingrese una fecha válida.\n");
+            printf("¿Desea calcular otro número de la suerte? (s/n): ");
+            scanf(" %c", &respuesta);
         }
 
         printf("¿Desea calcular otro número de la suerte? (s/n): ");
