@@ -15,13 +15,13 @@ int main() {
         if ((mes == 2) && ((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0))) {
             if (dia > 29) {
                 printf("Fecha ingresada no válida. Por favor, ingrese una fecha válida.\n");
-                continue; // Vuelve al inicio del bucle
+                continue; 
             }
             // Año bisiesto
         } else if (mes == 2 && dia > 28) {
             printf("Fecha ingresada no válida. Por favor, ingrese una fecha válida.\n");
-            continue; // Vuelve al inicio del bucle
-            // Año no bisiesto
+            continue; 
+            
             
         } 
         else if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && (dia > 30)) {
@@ -30,7 +30,7 @@ int main() {
         }
         else if (!((dia >= 1 && dia <= 31) && (mes >= 1 && mes <= 12) && (anio >= 1000 && anio <= 2024))) {
             printf("Fecha ingresada no válida. Por favor, ingrese una fecha válida.\n");
-            continue; // Vuelve al inicio del bucle
+            continue; 
         }
 
         suma_digitos = 0;
