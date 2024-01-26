@@ -12,10 +12,10 @@ int main() {
         printf("Ingrese su año de nacimiento (1000-2024): ");
         scanf("%d", &anio);
 
-        if (!((dia >= 1 && dia <= 31) && (mes >= 1 && mes <= 12) && (anio >= 1000 && anio <= 2024))) {
+         if (!((dia >= 1 && dia <= 31) && (mes >= 1 && mes <= 12) && (anio >= 1000 && anio <= 2024))) {
             printf("Fecha ingresada no válida. ");
-        } else if ((mes == 2) && ((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)) && dia > 29) {
-            printf("Fecha ingresada no válida para febrero en año bisiesto. ");
+        }else if ((mes == 2) && (dia > 29) && ((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0))) {
+        printf("Fecha ingresada no válida para febrero en año bisiesto. ");
         } else if (mes == 2 && dia > 28) {
             printf("Fecha ingresada no válida para febrero. ");
         } else if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30) {
