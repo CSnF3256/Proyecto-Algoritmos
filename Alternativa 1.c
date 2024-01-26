@@ -17,7 +17,7 @@ int main() {
                 printf("Fecha ingresada no válida. Por favor, ingrese una fecha válida.\n");
                 continue; 
             }
-            // Año bisiesto
+          
         } else if (mes == 2 && dia > 28) {
             printf("Fecha ingresada no válida. Por favor, ingrese una fecha válida.\n");
             continue; 
